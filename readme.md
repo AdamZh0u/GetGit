@@ -40,16 +40,59 @@ touch license
 
 ## change license and readem.md
 
-git status
+git status ## 显示工作区 stage 变化
 git add readme.md
 git status
 git add license
 git status
 git commit
 
-
-
+git add readme.md
+git add readme.md
+git commit ## 多次修改放到暂存区
 ```
+
+## checkout -- file
+回退未add的修改
+```bash
+## change readme.md
+123
+
+git checkout -- readme.md
+```
+将未commit的add到暂存区的回退 unstage
+```bash
+123
+git add readme.md
+git reset HEAD readme.md 
+```
+两次add 后怎么推到第一次add的？
+
+## remove and checkout back 
+```bash
+rm license 
+git status
+
+git rm license 
+git satus
+git commit -m "rm license" ## rm file in folder and in git
+
+rm license 
+git checkout -- license ## recover
+```
+
+## remote repo
+```bash
+ssh-keygen -t rsa -C "youremail@example.com"
+```
+id_rsa是私钥 id_rsa.pub是公钥
+
+```bash
+git remote add origin git@github.com:AdamZh0u/GetGit.git
+
+git push -u origin master ## 远程origin 
+```
+
 
 
 

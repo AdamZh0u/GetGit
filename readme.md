@@ -83,17 +83,43 @@ git checkout -- license ## recover
 
 ## remote repo
 ```bash
-ssh-keygen -t rsa -C "youremail@example.com"
+ssh-keygen -t rsa -C "youremail@example.com" 
 ```
-id_rsa是私钥 id_rsa.pub是公钥
+id_rsa 
+id_rsa.pub公钥
 
 ```bash
-git remote add origin git@github.com:AdamZh0u/GetGit.git
+git remote add origin git@github.com:AdamZh0u/GetGit.git ## origin
 
-git push -u origin master ## 远程origin 
+git push -u origin master ## --upstream 远程origin 
 ```
 
+## branch
 
+
+
+## fork workflow
+```bash
+fork repo1
+git clone frepo1
+git remote -v # show frepo1
+git remote add upstream repo1
+git remote -v # show frepo1 repo1
+
+git checkout -b branch master
+## changing on branch
+
+git checkout master
+git pull upstream master
+## pull new changes to local master
+
+git checkout -b branch_new master
+git merge branch
+git branch -m branch_new branch## rename
+git push origin branch
+
+pull request merge branch to master
+```
 
 
 resources: https://github.com/dtbootcamp/getting-started-with-git-and-github

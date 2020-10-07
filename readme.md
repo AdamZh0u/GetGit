@@ -94,9 +94,26 @@ git remote add origin git@github.com:AdamZh0u/GetGit.git ## origin
 git push -u origin master ## --upstream 远程origin 
 ```
 
-## branch
+## create branch
+```bash
+git checkout -b dev ## 创建并切换到
+git branch ## 查看分支
+git checkout master ## 切换回master
 
+git merge dev ## 合并dev到当前分支 快速合并
+git branch -b dev ## 删除dev
+git branch
+```
 
+```bash
+git switch -c dev ## create dev
+git switch master ## git switch to master
+```
+
+## merge conflicts
+```bash
+
+```
 
 ## fork workflow
 ```bash
@@ -123,3 +140,4 @@ pull request merge branch to master
 
 
 resources: https://github.com/dtbootcamp/getting-started-with-git-and-github
+https://nvie.com/posts/a-successful-git-branching-model/

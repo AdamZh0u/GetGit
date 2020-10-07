@@ -94,26 +94,34 @@ git remote add origin git@github.com:AdamZh0u/GetGit.git ## origin
 git push -u origin master ## --upstream 远程origin 
 ```
 
-## create branch
+## branch create and quick merge 
 ```bash
-git checkout -b dev ## 创建并切换到
-git branch ## 查看分支
-git checkout master ## 切换回master
+## create branch and switch to
+git checkout -b dev 
 
-git merge dev ## 合并dev到当前分支 快速合并
-git branch -b dev ## 删除dev
-git branch
+# or 
+git switch -c dev
+# or 
+git branch dev  ## == git branch -c dev
+git checkout dev
+
+touch license
+## do changes in license 
+git add license 
+git commit -m "add license to dev"
+
+## 
+git checkout master
+git merge # quick merge mode
+
+git branch -d dev
 ```
 
-```bash
-git switch -c dev ## create dev
-git switch master ## git switch to master
-```
-
-## merge conflicts
+## git conflict
 ```bash
 
 ```
+
 
 ## fork workflow
 ```bash
@@ -140,4 +148,3 @@ pull request merge branch to master
 
 
 resources: https://github.com/dtbootcamp/getting-started-with-git-and-github
-https://nvie.com/posts/a-successful-git-branching-model/

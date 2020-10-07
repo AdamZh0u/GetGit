@@ -119,7 +119,11 @@ git branch -d dev
 
 ## git conflict
 ```bash
+git switch -c dev
 
+git add / git commit -m "switch -c dev"/ git push origin dev
+
+git switch master
 ```
 
 

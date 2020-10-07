@@ -120,11 +120,21 @@ git branch -d dev
 ## git conflict
 ```bash
 git switch -c dev
-
+## change
 git add / git commit -m "switch -c dev"/ git push origin dev
 
 git switch master
+## change
 git add / git commit -m "change in master branch" / git push
+
+git merge dev ## conflicts
+## 手动修改
+git add .
+git commit -m "fix conflict" / git push 
+
+git log --graph --pretty=oneline --abbrev-commit
+
+git branch -d dev
 ```
 
 

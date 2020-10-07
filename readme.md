@@ -124,6 +124,8 @@ git switch -c dev
 git add / git commit -m "switch -c dev"/ git push origin dev
 
 git switch master
+git add / git commit -m "change in master branch" / git push
+
 ```
 
 

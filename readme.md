@@ -119,6 +119,8 @@ git branch -d dev
 
 ## git conflict
 ```bash
+git switch -c dev
+
 
 ```
 
